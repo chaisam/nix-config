@@ -20,11 +20,11 @@
       # "https://nix-gaming.cachix.org"
       # "https://nixpkgs-wayland.cachix.org"
     ];
-    extra-trusted-public-keys = [
-      "anyrun.cachix.org-1:pqBobmOjI7nKlsUMV25u9QHa9btJK65/C8vnO3p346s="
+    #extra-trusted-public-keys = [
+      #"anyrun.cachix.org-1:pqBobmOjI7nKlsUMV25u9QHa9btJK65/C8vnO3p346s="
       # "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="
       # "nixpkgs-wayland.cachix.org-1:3lwxaILxMRkVhehr5StQprHdEo4IrE8sRho9R9HOLYA="
-    ];
+    #];
   };
 
   # This is the standard format for flake.nix. `inputs` are the dependencies of the flake,
@@ -39,12 +39,12 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.05";
 
     # for macos
-    nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-24.05-darwin";
-    nix-darwin = {
-      url = "github:lnl7/nix-darwin";
-      inputs.nixpkgs.follows = "nixpkgs-darwin";
-    };
-    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    #nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-24.05-darwin";
+    #nix-darwin = {
+      #url = "github:lnl7/nix-darwin";
+      #inputs.nixpkgs.follows = "nixpkgs-darwin";
+    #};
+    #nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
     # home-manager, used for managing user configuration
     home-manager = {
@@ -57,10 +57,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    lanzaboote = {
-      url = "github:nix-community/lanzaboote/v0.4.1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #lanzaboote = {
+      #url = "github:nix-community/lanzaboote/v0.4.1";
+      #inputs.nixpkgs.follows = "nixpkgs";
+    #};
 
     impermanence.url = "github:nix-community/impermanence";
 
@@ -86,7 +86,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-gaming.url = "github:fufexan/nix-gaming";
+    #nix-gaming.url = "github:fufexan/nix-gaming";
 
     disko = {
       url = "github:nix-community/disko/v1.6.1";
@@ -128,18 +128,18 @@
 
     # my private secrets, it's a private repository, you need to replace it with your own.
     # use ssh protocol to authenticate via ssh-agent/ssh-key, and shallow clone to save time
-    mysecrets = {
-      url = "git+ssh://git@github.com/ryan4yin/nix-secrets.git?shallow=1";
-      flake = false;
-    };
+    #mysecrets = {
+      #url = "git+ssh://git@github.com/ryan4yin/nix-secrets.git?shallow=1";
+      #flake = false;
+    #};
 
     # my wallpapers
-    wallpapers = {
-      url = "github:ryan4yin/wallpapers";
-      flake = false;
-    };
+    #wallpapers = {
+      #url = "github:ryan4yin/wallpapers";
+      #flake = false;
+    #};
 
-    nur-ryan4yin.url = "github:ryan4yin/nur-packages";
-    nur-ataraxiasjel.url = "github:AtaraxiaSjel/nur";
+    #nur-ryan4yin.url = "github:ryan4yin/nur-packages";
+    #nur-ataraxiasjel.url = "github:AtaraxiaSjel/nur";
   };
 }
